@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="300" MinHeight="450" MinWidth="300">
+        Title="Calculator" Height="450" Width="300" MinHeight="450" MinWidth="300" MaxHeight="600" MaxWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -19,23 +19,34 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="4"></Button>
-        <Button Grid.Row="4" Grid.Column="1"/>
-        <Button Grid.Row="4" Grid.Column="2"/>
-        <Button Grid.Row="4" Grid.Column="3"/>
-        <Button Grid.Row="3"/>
-        <Button Grid.Row="3" Grid.Column="1"/>
-        <Button Grid.Row="3" Grid.Column="2"/>
-        <Button Grid.Row="3" Grid.Column="3"/>
-        <Button Grid.Row="2"/>
-        <Button Grid.Row="2" Grid.Column="1"/>
-        <Button Grid.Row="2" Grid.Column="2"/>
-        <Button Grid.Row="2" Grid.Column="3"/>
-        <Button Grid.Row="1"/>
-        <Button Grid.Row="1" Grid.Column="1"/>
-        <Button Grid.Row="1" Grid.Column="2"/>
-        <Button Grid.Row="1" Grid.Column="3"/>
+        <Button Grid.Row="4" Content="4"></Button>
+        <Button Grid.Row="4" Grid.Column="1" Content="5"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="6"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="-"/>
+        <Button Grid.Row="3" Content="7"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="8"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="9"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="x"/>
+        <Button Grid.Row="2" Content="1/x"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="x^2"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="sqrt(x)"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="/"/>
+        <Button Grid.Row="1" Content="%"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="CE"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="C"/>
+        <Button Grid.Row="1" Grid.Column="3" Content="back"/>
+        <Button Grid.Row="5" Content="1"/>
+        <Button Grid.Row="5" Grid.Column="1" Content="2"/>
+        <Button Grid.Row="5" Grid.Column="2" Content="3"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="+"/>
+        <Button Grid.Row="6" Content="+/-"/>
+        <Button Grid.Row="6" Grid.Column="1" Content="0"/>
+        <Button Grid.Row="6" Grid.Column="2" Content=","/>
+        <Button Grid.Row="6" Grid.Column="3" Content="="/>
+        <TextBlock x:Name="textBlock" Margin="5,5,5,5" Text="TextBlock" TextWrapping="Wrap" Grid.ColumnSpan="4" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="20"/>
 
 
     </Grid>
