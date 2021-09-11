@@ -29,15 +29,43 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
-        <Button Grid.Row="4" Content="4" Style="{StaticResource numberButtonStyle}"></Button>
-        <Button Grid.Row="4" Grid.Column="1" Content="5" Style="{StaticResource numberButtonStyle}"/>
-        <Button Grid.Row="4" Grid.Column="2" Content="6" Style="{StaticResource numberButtonStyle}"/>
+
+        <Button x:Name="FourButton" Grid.Row="4" Content="4" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
+        <Button x:Name="FiveButton"  Grid.Row="4" Grid.Column="1" Content="5" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
+        <Button x:Name="SixButton" Grid.Row="4" Grid.Column="2" Content="6" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="4" Grid.Column="3" Content="-" Style="{StaticResource ButtonStyle}"/>
-        <Button Grid.Row="3" Content="7" Style="{StaticResource numberButtonStyle}"/>
-        <Button Grid.Row="3" Grid.Column="1" Content="8" Style="{StaticResource numberButtonStyle}"/>
-        <Button Grid.Row="3" Grid.Column="2" Content="9" Style="{StaticResource numberButtonStyle}"/>
-        <Button Grid.Row="3" Grid.Column="3" Content="x" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="SevenButton" Grid.Row="3" Content="7" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
+        <Button x:Name="EightButton" Grid.Row="3" Grid.Column="1" Content="8" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
+        <Button x:Name="NineButton" Grid.Row="3" Grid.Column="2" Content="9" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="x" 
+                Style="{StaticResource ButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="2" Content="1/x" 
                 Style="{StaticResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
@@ -56,18 +84,33 @@
                 Command="{Binding BackButtonCommand}"
                 CommandParameter="{Binding FullResult}"
                 />
-        <Button Grid.Row="5" Content="1" Style="{StaticResource numberButtonStyle}"/>
-        <Button Grid.Row="5" Grid.Column="1" Content="2" Style="{StaticResource numberButtonStyle}"/>
-        <Button Grid.Row="5" Grid.Column="2" Content="3" Style="{StaticResource numberButtonStyle}"/>
+        <Button x:Name="OneButton" Grid.Row="5" Content="1" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
+        <Button x:Name="TwoButton" Grid.Row="5" Grid.Column="1" Content="2" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
+        <Button x:Name="ThreeButton" Grid.Row="5" Grid.Column="2" Content="3" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="5" Grid.Column="3" Content="+" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Row="6" Content="+/-" Style="{StaticResource ButtonStyle}"/>
-        <Button Grid.Row="6" Grid.Column="1" Content="0" Style="{StaticResource numberButtonStyle}"/>
+        <Button x:Name="ZeroButton" Grid.Row="6" Grid.Column="1" Content="0" 
+                Style="{StaticResource numberButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding NumberButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="6" Grid.Column="2" Content="," Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Row="6" Grid.Column="3" Content="=" 
                 Style="{StaticResource equalsButtonStyle}" 
                 DataContext="{StaticResource CalculatorVM}" 
-                Command="{Binding NumberButtonCommand}" 
-                CommandParameter="{Binding FullResult}"/>
+                />
         <TextBlock x:Name="resultTextBox" 
                  DataContext="{StaticResource CalculatorVM}" 
                  Margin="5,5,5,5" 

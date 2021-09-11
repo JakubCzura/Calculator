@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Calculator"
              StartupUri="View/MainWindow.xaml">
+    
     <Application.Resources>
+        
         <SolidColorBrush x:Key="appBackgroundColour" Color="#FFD0E281"/>
 
         <Style TargetType="Grid">
