@@ -11,10 +11,11 @@ namespace Calculator.ViewModel
     {
         private Result result = new Result { FullResult = "1231321" };
         public NumberButtonCommand NumberButtonCommand { get; set; }
-
+        public BackButtonCommand BackButtonCommand { get; set; }
         public CalculatorVM()
         {
             NumberButtonCommand = new NumberButtonCommand(this);
+            BackButtonCommand = new BackButtonCommand(this);
         }
 
         public Result Result
