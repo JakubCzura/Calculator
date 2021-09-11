@@ -17,6 +17,8 @@
 
         <Style TargetType="Button" x:Key="equalsButtonStyle" BasedOn="{StaticResource ButtonStyle}">
             <Setter Property="Background" Value="CadetBlue"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="Cyan"></Setter>
         </Style>
 
         <Style TargetType="Button" x:Key="numberButtonStyle" BasedOn="{StaticResource ButtonStyle}">
