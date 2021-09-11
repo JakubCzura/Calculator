@@ -45,12 +45,7 @@
         <Button Grid.Row="1" Content="%" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Row="1" Grid.Column="1" Content="CE" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Row="1" Grid.Column="2" Content="C" Style="{StaticResource ButtonStyle}"/>
-        <Button Grid.Row="1" Grid.Column="3" Content="back" 
-                Style="{StaticResource ButtonStyle}"
-                DataContext="{StaticResource CalculatorVM}"
-                Command="{Binding BackButtonCommand}"
-                CommandParameter="{Binding FullResult}"
-                />
+        <Button Grid.Row="1" Grid.Column="3" Content="back" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Row="5" Content="1" Style="{StaticResource numberButtonStyle}"/>
         <Button Grid.Row="5" Grid.Column="1" Content="2" Style="{StaticResource numberButtonStyle}"/>
         <Button Grid.Row="5" Grid.Column="2" Content="3" Style="{StaticResource numberButtonStyle}"/>
@@ -63,7 +58,7 @@
                 DataContext="{StaticResource CalculatorVM}" 
                 Command="{Binding NumberButtonCommand}" 
                 CommandParameter="{Binding FullResult}"/>
-        <TextBlock x:Name="resultTextBox" 
+        <TextBox x:Name="resultTextBox" 
                  DataContext="{StaticResource CalculatorVM}" 
                  Margin="5,5,5,5" 
                  Text="{Binding FullResult, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
