@@ -10,12 +10,16 @@ namespace Calculator.ViewModel
     public class CalculatorVM : INotifyPropertyChanged
     {
         private Result result = new Result { FullResult = "1231321" };
+
         public NumberButtonCommand NumberButtonCommand { get; set; }
         public BackButtonCommand BackButtonCommand { get; set; }
+        public DivideByResultButtonCommand DivideByResultButtonCommand { get; set; }
+
         public CalculatorVM()
         {
             NumberButtonCommand = new NumberButtonCommand(this);
             BackButtonCommand = new BackButtonCommand(this);
+            DivideByResultButtonCommand = new DivideByResultButtonCommand(this);
         }
 
         public Result Result

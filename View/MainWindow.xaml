@@ -13,7 +13,7 @@
         <app:App x:Key="App"/>
     </Window.Resources>
     
-    <Grid>
+    <Grid DataContext="{StaticResource CalculatorVM}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -38,7 +38,12 @@
         <Button Grid.Row="3" Grid.Column="1" Content="8" Style="{StaticResource numberButtonStyle}"/>
         <Button Grid.Row="3" Grid.Column="2" Content="9" Style="{StaticResource numberButtonStyle}"/>
         <Button Grid.Row="3" Grid.Column="3" Content="x" Style="{StaticResource ButtonStyle}"/>
-        <Button Grid.Row="2" Content="1/x" Style="{StaticResource ButtonStyle}"/>
+        <Button Grid.Row="2" Content="1/x" 
+                Style="{StaticResource ButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding DivideByResultButtonCommand}"
+                CommandParameter="{Binding FullResult}"
+                />
         <Button Grid.Row="2" Grid.Column="1" Content="x^2" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Row="2" Grid.Column="2" Content="sqrt(x)" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Row="2" Grid.Column="3" Content="/" Style="{StaticResource ButtonStyle}"/>
