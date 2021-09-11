@@ -1,4 +1,5 @@
 ﻿using Calculator.Model;
+using Calculator.ViewModel.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,8 +9,14 @@ namespace Calculator.ViewModel
 {
     public class CalculatorVM : INotifyPropertyChanged
     {
-        private Result result;
-     
+        private Result result = new Result { FullResult = "1231321" };
+        public NumberButtonCommand NumberButtonCommand { get; set; }
+
+        public CalculatorVM()
+        {
+            NumberButtonCommand = new NumberButtonCommand(this);
+        }
+
         public Result Result
         {
             get { return result; }
@@ -20,9 +27,9 @@ namespace Calculator.ViewModel
             }
         }
 
-        private decimal fullResult;
+        private string fullResult;
 
-        public decimal FullResult
+        public string FullResult
         {
             get { return fullResult; }
             set
