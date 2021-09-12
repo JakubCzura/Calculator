@@ -26,7 +26,7 @@ namespace Calculator.ViewModel.Commands
         }
 
         public void Execute(object parameter)
-        {
+        {            
             CalculatorVM.FullResult += "2";
         }
     }
