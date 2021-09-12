@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Calculator.ViewModel.Commands
+namespace Calculator.ViewModel.Commands.NumberButtons
 {
-    public class NumberButtonCommand : ICommand
+    public class BasicNumberButton : ICommand
     {
-        public NumberButtonCommand(CalculatorVM calculatorVM)
+        public CalculatorVM CalculatorVM { get; set; }
+
+        public BasicNumberButton(CalculatorVM calculatorVM)
         {
             CalculatorVM = calculatorVM;
         }
-
-        public CalculatorVM CalculatorVM { get; set; }
 
         public event EventHandler CanExecuteChanged
         {
@@ -27,9 +25,9 @@ namespace Calculator.ViewModel.Commands
             return true;
         }
 
-        public void Execute(object parameter)
-        {          
-            CalculatorVM.FullResult += "22";
+        public virtual void Execute(object parameter)
+        {
+            CalculatorVM.FullResult += "0";
         }
     }
 }
