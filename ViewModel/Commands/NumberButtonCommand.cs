@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace Calculator.ViewModel.Commands
@@ -26,8 +28,8 @@ namespace Calculator.ViewModel.Commands
         }
 
         public void Execute(object parameter)
-        {            
-            CalculatorVM.FullResult += "2";
+        {          
+            CalculatorVM.FullResult += "22";
         }
     }
 }
