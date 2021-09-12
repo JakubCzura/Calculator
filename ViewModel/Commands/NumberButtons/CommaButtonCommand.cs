@@ -21,9 +21,7 @@ namespace Calculator.ViewModel.Commands.NumberButtons
         }
         public override void Execute(object parameter)
         {
-
             CalculatorVM.FullResult += ",";
-
         }
     }
 }

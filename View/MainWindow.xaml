@@ -98,7 +98,11 @@
                 Command="{Binding ThreeButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="5" Grid.Column="3" Content="+" Style="{StaticResource ButtonStyle}"/>
-        <Button Grid.Row="6" Content="+/-" Style="{StaticResource ButtonStyle}"/>
+        <Button Grid.Row="6" Content="+/-" 
+                Style="{StaticResource ButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding PlusMinusButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
         <Button x:Name="ZeroButton" Grid.Row="6" Grid.Column="1" Content="0" 
                 Style="{StaticResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
