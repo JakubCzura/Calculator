@@ -27,6 +27,7 @@ namespace Calculator.ViewModel
         public DivideByResultButtonCommand DivideByResultButtonCommand { get; set; }
         public PlusMinusButtonCommand PlusMinusButtonCommand { get; set; }
         public PowerButtonCommand PowerButtonCommand { get; set; }
+        public SquareRootButtonCommand SquareRootButtonCommand { get; set; }
 
         public CalculatorVM()
         {
@@ -45,6 +46,7 @@ namespace Calculator.ViewModel
             DivideByResultButtonCommand = new DivideByResultButtonCommand(this);
             PlusMinusButtonCommand = new PlusMinusButtonCommand(this);
             PowerButtonCommand = new PowerButtonCommand(this);
+            SquareRootButtonCommand = new SquareRootButtonCommand(this);
         }
 
         public Result Result
