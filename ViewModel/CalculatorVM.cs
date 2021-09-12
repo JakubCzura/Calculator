@@ -22,7 +22,7 @@ namespace Calculator.ViewModel
         public NumberButtonCommand SevenButtonCommand { get; set; }
         public NumberButtonCommand EightButtonCommand { get; set; }
         public NumberButtonCommand NineButtonCommand { get; set; }
-        
+        public CommaButtonCommand CommaButtonCommand { get; set; }
         public BackButtonCommand BackButtonCommand { get; set; }
         public DivideByResultButtonCommand DivideByResultButtonCommand { get; set; }
 
@@ -38,8 +38,7 @@ namespace Calculator.ViewModel
             SevenButtonCommand = new NumberButtonCommand(this, "7");
             EightButtonCommand = new NumberButtonCommand(this, "8");
             NineButtonCommand = new NumberButtonCommand(this, "9");
-
-
+            CommaButtonCommand = new CommaButtonCommand(this);
             BackButtonCommand = new BackButtonCommand(this);
             DivideByResultButtonCommand = new DivideByResultButtonCommand(this);
         }

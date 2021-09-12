@@ -20,7 +20,7 @@ namespace Calculator.ViewModel.Commands.NumberButtons
             remove { CommandManager.RequerySuggested -= value; }
         }
 
-        public bool CanExecute(object parameter)
+        public virtual bool CanExecute(object parameter)
         {
             return true;
         }

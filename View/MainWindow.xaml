@@ -63,9 +63,7 @@
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="3" Grid.Column="3" Content="x" 
                 Style="{StaticResource ButtonStyle}"
-                DataContext="{StaticResource CalculatorVM}"
-                Command="{Binding NumberButtonCommand}"
-                CommandParameter="{Binding FullResult}"/>
+                />
         <Button Grid.Row="2" Content="1/x" 
                 Style="{StaticResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
@@ -106,7 +104,11 @@
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding ZeroButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
-        <Button Grid.Row="6" Grid.Column="2" Content="," Style="{StaticResource ButtonStyle}"/>
+        <Button Grid.Row="6" Grid.Column="2" Content="," 
+                Style="{StaticResource ButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding CommaButtonCommand}"
+                CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="6" Grid.Column="3" Content="=" 
                 Style="{StaticResource equalsButtonStyle}" 
                 DataContext="{StaticResource CalculatorVM}" 
