@@ -1,5 +1,6 @@
 ﻿using Calculator.Model;
 using Calculator.ViewModel.Commands;
+using Calculator.ViewModel.Commands.NumberButtons;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,13 +12,34 @@ namespace Calculator.ViewModel
     {
         private Result result = new Result { FullResult = "1231321" };
 
-        public NumberButtonCommand NumberButtonCommand { get; set; }
+        public NumberButtonCommand ZeroButtonCommand { get; set; }
+        public NumberButtonCommand OneButtonCommand { get; set; }
+        public NumberButtonCommand TwoButtonCommand { get; set; }
+        public NumberButtonCommand ThreeButtonCommand { get; set; }
+        public NumberButtonCommand FourButtonCommand { get; set; }
+        public NumberButtonCommand FiveButtonCommand { get; set; }
+        public NumberButtonCommand SixButtonCommand { get; set; }
+        public NumberButtonCommand SevenButtonCommand { get; set; }
+        public NumberButtonCommand EightButtonCommand { get; set; }
+        public NumberButtonCommand NineButtonCommand { get; set; }
+        
         public BackButtonCommand BackButtonCommand { get; set; }
         public DivideByResultButtonCommand DivideByResultButtonCommand { get; set; }
 
         public CalculatorVM()
         {
-            NumberButtonCommand = new NumberButtonCommand(this);
+            ZeroButtonCommand = new NumberButtonCommand(this, "0");
+            OneButtonCommand = new NumberButtonCommand(this, "1");
+            TwoButtonCommand = new NumberButtonCommand(this, "2");
+            ThreeButtonCommand = new NumberButtonCommand(this, "3");
+            FourButtonCommand = new NumberButtonCommand(this, "4");
+            FiveButtonCommand = new NumberButtonCommand(this, "5");
+            SixButtonCommand = new NumberButtonCommand(this, "6");
+            SevenButtonCommand = new NumberButtonCommand(this, "7");
+            EightButtonCommand = new NumberButtonCommand(this, "8");
+            NineButtonCommand = new NumberButtonCommand(this, "9");
+
+
             BackButtonCommand = new BackButtonCommand(this);
             DivideByResultButtonCommand = new DivideByResultButtonCommand(this);
         }
