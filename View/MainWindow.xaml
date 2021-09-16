@@ -63,6 +63,9 @@
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="3" Grid.Column="3" Content="x" 
                 Style="{StaticResource ButtonStyle}"
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding MultiplyButtonCommand}"
+                CommandParameter="{Binding FullResult}"
                 />
         <Button Grid.Row="2" Content="1/x" 
                 Style="{StaticResource ButtonStyle}"

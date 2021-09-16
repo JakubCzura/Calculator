@@ -6,8 +6,8 @@ namespace Calculator.Model
 {
     public class Result
     {
-        public decimal FirstNumber { get; set; }
-        public decimal SecondNumber { get; set; }
+        public string FirstNumber { get; set; }
+        public string SecondNumber { get; set; }
         public string FullResult { get; set; }
         public string Operation { get; set; }
     }

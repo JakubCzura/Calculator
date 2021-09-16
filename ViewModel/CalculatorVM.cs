@@ -10,7 +10,7 @@ namespace Calculator.ViewModel
 {
     public class CalculatorVM : INotifyPropertyChanged
     {
-        private Result result = new Result { FullResult = "1231321" };
+        private Result Result = new Result();
 
         public NumberButtonCommand ZeroButtonCommand { get; set; }
         public NumberButtonCommand OneButtonCommand { get; set; }
@@ -31,6 +31,7 @@ namespace Calculator.ViewModel
         public PercentButtonCommand PercentButtonCommand { get; set; }
         public CeButtonCommand CeButtonCommand { get; set; }
         public CButtonCommand CButtonCommand { get; set; }
+        public MultiplyButtonCommand MultiplyButtonCommand { get; set; }
 
         public CalculatorVM()
         {
@@ -53,17 +54,18 @@ namespace Calculator.ViewModel
             PercentButtonCommand = new PercentButtonCommand(this);
             CeButtonCommand = new CeButtonCommand(this);
             CButtonCommand = new CButtonCommand(this);
+            MultiplyButtonCommand = new MultiplyButtonCommand(this, Result);
         }
 
-        public Result Result
-        {
-            get { return result; }
-            set
-            {
-                Result = value;
-                OnPropertyChanged("Result");
-            }
-        }
+        //public Result Result
+        //{
+        //    get { return result; }
+        //    set
+        //    {
+        //        Result = value;
+        //        OnPropertyChanged("Result");
+        //    }
+        //}
 
         private string fullResult;
 
