@@ -42,7 +42,7 @@ namespace Calculator.ViewModel.Commands
 
         public void Execute(object parameter)
         {
-            Result.FirstNumber = parameter as string;
+            CalculatorVM.FirstNumber = parameter as string;
             Result.Operation = "*";
             CalculatorVM.FullResult = string.Empty;
             //fullResultDouble = Math.Pow(fullResultDouble, 2);

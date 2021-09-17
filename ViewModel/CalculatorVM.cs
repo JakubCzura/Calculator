@@ -32,6 +32,12 @@ namespace Calculator.ViewModel
         public CeButtonCommand CeButtonCommand { get; set; }
         public CButtonCommand CButtonCommand { get; set; }
         public MultiplyButtonCommand MultiplyButtonCommand { get; set; }
+<<<<<<< HEAD
+=======
+        public DivideButtonCommand DivideButtonCommand { get; set; }
+        public AddButtonCommand AddButtonCommand { get; set; }
+        public SubtractButtonCommand SubtractButtonCommand { get; set; }
+>>>>>>> ok
 
         public CalculatorVM()
         {
@@ -55,6 +61,12 @@ namespace Calculator.ViewModel
             CeButtonCommand = new CeButtonCommand(this);
             CButtonCommand = new CButtonCommand(this);
             MultiplyButtonCommand = new MultiplyButtonCommand(this, Result);
+<<<<<<< HEAD
+=======
+            DivideButtonCommand = new DivideButtonCommand(this, Result);
+            AddButtonCommand = new AddButtonCommand(this, Result);
+            SubtractButtonCommand = new SubtractButtonCommand(this, Result);
+>>>>>>> ok
         }
 
         //public Result Result
@@ -67,15 +79,23 @@ namespace Calculator.ViewModel
         //    }
         //}
 
-        private string fullResult;
+        public string FirstNumber
+        {
+            get { return Result.FirstNumber; }
+            set 
+            { 
+                Result.FirstNumber = value;
+                OnPropertyChanged(nameof(FirstNumber));
+            }     
+        }
 
         public string FullResult
         {
-            get { return fullResult; }
+            get { return Result.FullResult; }
             set
             {
-                fullResult = value;
-                OnPropertyChanged("FullResult");
+                Result.FullResult = value;
+                OnPropertyChanged(nameof(FullResult));
             }
         }
 
