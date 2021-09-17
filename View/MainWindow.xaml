@@ -150,7 +150,9 @@
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="6" Grid.Column="3" Content="=" 
                 Style="{StaticResource equalsButtonStyle}" 
-                DataContext="{StaticResource CalculatorVM}" 
+                DataContext="{StaticResource CalculatorVM}"
+                Command="{Binding EqualsButtonCommand}"
+                CommandParameter="{Binding FullResult}"
                 />
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
             <TextBlock x:Name="firstNumberTextBox" 
