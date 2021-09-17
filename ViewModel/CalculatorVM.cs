@@ -75,6 +75,16 @@ namespace Calculator.ViewModel
             }     
         }
 
+        public string SecondNumber
+        {
+            get { return Result.SecondNumber; }
+            set 
+            { 
+                Result.SecondNumber = value;
+                OnPropertyChanged(nameof(SecondNumber));
+            }
+        }
+
         public string FullResult
         {
             get { return Result.FullResult; }
@@ -85,6 +95,15 @@ namespace Calculator.ViewModel
             }
         }
 
+        public string Operation
+        {
+            get { return Result.Operation; }
+            set
+            {
+                Result.Operation = value;
+                OnPropertyChanged(nameof(Operation));
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)

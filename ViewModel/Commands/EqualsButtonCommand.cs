@@ -32,7 +32,7 @@ namespace Calculator.ViewModel.Commands
 
             if (fullResult != null && fullResult.Length > 0)
             {
-                if (double.TryParse(parameter.ToString(), out fullResultDouble) == true && fullResultDouble >= 0 && double.IsInfinity(fullResultDouble) == false)
+                if (double.TryParse(parameter.ToString(), out fullResultDouble) == true && double.IsInfinity(fullResultDouble) == false)
                 {
                     return true;
                 }
@@ -42,7 +42,54 @@ namespace Calculator.ViewModel.Commands
 
         public void Execute(object parameter)
         {
+            double result = 0;
+            double firstNumberDouble = 0;
+            double secondNumberDouble = 0;
             
+            switch(Result.Operation)
+            {
+                case "+":
+                    {
+                        if(double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                        {
+                            result = firstNumberDouble + secondNumberDouble;
+                            CalculatorVM.FullResult = result.ToString();
+                        }
+                        break;
+                    }
+                case "-":
+                    {
+                        if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                        {
+                            result = firstNumberDouble - secondNumberDouble;
+                            CalculatorVM.FullResult = result.ToString();
+                        }
+                        break;
+                    }
+                case "/":
+                    {
+                        if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true && secondNumberDouble!=0)
+                        {
+                            result = firstNumberDouble / secondNumberDouble;
+                            CalculatorVM.FullResult = result.ToString();
+                        }
+                        break;
+                    }
+                case "*":
+                    {
+                        if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                        {
+                            result = firstNumberDouble * secondNumberDouble;
+                            CalculatorVM.FullResult = result.ToString();
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+                
+            }
         }
     }
 }
