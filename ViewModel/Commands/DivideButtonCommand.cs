@@ -43,7 +43,7 @@ namespace Calculator.ViewModel.Commands
         public void Execute(object parameter)
         {
             CalculatorVM.FirstNumber = parameter as string;
-            Result.Operation = "/";
+            CalculatorVM.Operation = "/";
             CalculatorVM.FullResult = string.Empty;
         }
     }

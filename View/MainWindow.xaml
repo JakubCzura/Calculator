@@ -155,12 +155,26 @@
                 CommandParameter="{Binding FullResult}"
                 />
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
-            <TextBlock x:Name="firstNumberTextBox" 
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="firstNumberTextBox" 
                      DataContext="{StaticResource CalculatorVM}" 
                      Margin="5,5,5,5" 
                      Text="{Binding FirstNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                      TextWrapping="Wrap" Grid.ColumnSpan="4" TextAlignment="Right" HorizontalAlignment="Right" 
                      VerticalAlignment="Bottom" FontSize="20"/>
+                <TextBlock x:Name="operationTextBox" 
+                     DataContext="{StaticResource CalculatorVM}" 
+                     Margin="5,5,5,5" 
+                     Text="{Binding Operation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     TextWrapping="Wrap" Grid.ColumnSpan="4" TextAlignment="Right" HorizontalAlignment="Right" 
+                     VerticalAlignment="Bottom" FontSize="20"/>
+                <TextBlock x:Name="secondNumberTextBox" 
+                     DataContext="{StaticResource CalculatorVM}" 
+                     Margin="5,5,5,5" 
+                     Text="{Binding SecondNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     TextWrapping="Wrap" Grid.ColumnSpan="4" TextAlignment="Right" HorizontalAlignment="Right" 
+                     VerticalAlignment="Bottom" FontSize="20"/>
+            </StackPanel>
             <TextBlock x:Name="resultTextBox" 
                      DataContext="{StaticResource CalculatorVM}" 
                      Margin="5,5,5,5" 

@@ -42,6 +42,8 @@ namespace Calculator.ViewModel.Commands
 
         public void Execute(object parameter)
         {
+            CalculatorVM.SecondNumber = parameter as string;
+
             double result = 0;
             double firstNumberDouble = 0;
             double secondNumberDouble = 0;
