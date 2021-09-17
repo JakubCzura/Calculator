@@ -83,16 +83,6 @@ namespace Calculator.ViewModel
             }     
         }
 
-        public string FirstNumber
-        {
-            get { return Result.FirstNumber; }
-            set 
-            { 
-                Result.FirstNumber = value;
-                OnPropertyChanged(nameof(FirstNumber));
-            }     
-        }
-
         public string FullResult
         {
             get { return Result.FullResult; }
