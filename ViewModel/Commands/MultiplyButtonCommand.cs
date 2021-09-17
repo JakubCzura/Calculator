@@ -45,8 +45,6 @@ namespace Calculator.ViewModel.Commands
             CalculatorVM.FirstNumber = parameter as string;
             Result.Operation = "*";
             CalculatorVM.FullResult = string.Empty;
-            //fullResultDouble = Math.Pow(fullResultDouble, 2);
-            //CalculatorVM.FullResult = fullResultDouble.ToString();
         }
     }
 }
