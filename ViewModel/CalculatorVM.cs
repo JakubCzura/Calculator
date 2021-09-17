@@ -35,6 +35,7 @@ namespace Calculator.ViewModel
         public DivideButtonCommand DivideButtonCommand { get; set; }
         public AddButtonCommand AddButtonCommand { get; set; }
         public SubtractButtonCommand SubtractButtonCommand { get; set; }
+        public EqualsButtonCommand EqualsButtonCommand { get; set; }
 
         public CalculatorVM()
         {
@@ -61,17 +62,8 @@ namespace Calculator.ViewModel
             DivideButtonCommand = new DivideButtonCommand(this, Result);
             AddButtonCommand = new AddButtonCommand(this, Result);
             SubtractButtonCommand = new SubtractButtonCommand(this, Result);
+            EqualsButtonCommand = new EqualsButtonCommand(this, Result);
         }
-
-        //public Result Result
-        //{
-        //    get { return result; }
-        //    set
-        //    {
-        //        Result = value;
-        //        OnPropertyChanged("Result");
-        //    }
-        //}
 
         public string FirstNumber
         {
