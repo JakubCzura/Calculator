@@ -10,6 +10,8 @@ namespace Calculator.ViewModel
 {
     public class CalculatorVM : INotifyPropertyChanged
     {
+        public bool WasEqualsButtonUsed { get; set; } = false;
+
         private Result Result = new Result();
 
         public NumberButtonCommand ZeroButtonCommand { get; set; }

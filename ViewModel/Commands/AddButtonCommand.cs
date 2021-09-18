@@ -46,6 +46,8 @@ namespace Calculator.ViewModel.Commands
             CalculatorVM.FirstNumber = parameter as string;
             CalculatorVM.Operation = "+";
             CalculatorVM.FullResult = string.Empty;
+            CalculatorVM.SecondNumber = string.Empty;
+            CalculatorVM.WasEqualsButtonUsed = false;
         }
     }
 }

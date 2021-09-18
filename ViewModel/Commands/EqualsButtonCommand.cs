@@ -40,49 +40,110 @@ namespace Calculator.ViewModel.Commands
             return false;
         }
 
+        double result = 0;
+        double firstNumberDouble = 0;
+        double secondNumberDouble = 0;
+
         public void Execute(object parameter)
         {
-            CalculatorVM.SecondNumber = parameter as string;
+            if(CalculatorVM.WasEqualsButtonUsed == false)
+            {
+                CalculatorVM.SecondNumber = parameter as string;
+            }
+            else
+            {
+                CalculatorVM.FirstNumber = parameter as string;
+            }
 
-            double result = 0;
-            double firstNumberDouble = 0;
-            double secondNumberDouble = 0;
+            
             
             switch(Result.Operation)
             {
                 case "+":
                     {
-                        if(double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                        if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            result = firstNumberDouble + secondNumberDouble;
-                            CalculatorVM.FullResult = result.ToString();
+                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            {
+                                result = firstNumberDouble + secondNumberDouble;
+                                CalculatorVM.FullResult = result.ToString();
+                                CalculatorVM.WasEqualsButtonUsed = true;
+                            }
+                        }
+                        else
+                        {
+                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            {
+                                CalculatorVM.FirstNumber = CalculatorVM.FullResult;
+                                result = double.Parse(CalculatorVM.FirstNumber) + double.Parse(CalculatorVM.SecondNumber);
+                                CalculatorVM.FullResult = result.ToString();
+                            }
                         }
                         break;
                     }
                 case "-":
                     {
-                        if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                        if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            result = firstNumberDouble - secondNumberDouble;
-                            CalculatorVM.FullResult = result.ToString();
+                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            {
+                                result = firstNumberDouble - secondNumberDouble;
+                                CalculatorVM.FullResult = result.ToString();
+                                CalculatorVM.WasEqualsButtonUsed = true;
+                            }
+                        }
+                        else
+                        {
+                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            {
+                                CalculatorVM.FirstNumber = CalculatorVM.FullResult;
+                                result = double.Parse(CalculatorVM.FirstNumber) - double.Parse(CalculatorVM.SecondNumber);
+                                CalculatorVM.FullResult = result.ToString();
+                            }
                         }
                         break;
                     }
                 case "/":
                     {
-                        if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true && secondNumberDouble!=0)
+                        if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            result = firstNumberDouble / secondNumberDouble;
-                            CalculatorVM.FullResult = result.ToString();
+                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            {
+                                result = firstNumberDouble / secondNumberDouble;
+                                CalculatorVM.FullResult = result.ToString();
+                                CalculatorVM.WasEqualsButtonUsed = true;
+                            }
+                        }
+                        else
+                        {
+                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            {
+                                CalculatorVM.FirstNumber = CalculatorVM.FullResult;
+                                result = double.Parse(CalculatorVM.FirstNumber) / double.Parse(CalculatorVM.SecondNumber);
+                                CalculatorVM.FullResult = result.ToString();
+                            }
                         }
                         break;
                     }
                 case "*":
                     {
-                        if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                        if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            result = firstNumberDouble * secondNumberDouble;
-                            CalculatorVM.FullResult = result.ToString();
+                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            {
+                                result = firstNumberDouble * secondNumberDouble;
+                                CalculatorVM.FullResult = result.ToString();
+                                CalculatorVM.WasEqualsButtonUsed = true;
+                            }
+                        }
+                        else
+                        {
+                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            {
+                                CalculatorVM.FirstNumber = CalculatorVM.FullResult;
+                                result = double.Parse(CalculatorVM.FirstNumber) * double.Parse(CalculatorVM.SecondNumber);
+                                CalculatorVM.FullResult = result.ToString();
+                            }
                         }
                         break;
                     }
@@ -91,6 +152,28 @@ namespace Calculator.ViewModel.Commands
                         break;
                     }
                 
+            }
+        }
+
+        private void Calculate()
+        {
+            if (CalculatorVM.WasEqualsButtonUsed == false)
+            {
+                if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                {
+                    result = firstNumberDouble + secondNumberDouble;
+                    CalculatorVM.FullResult = result.ToString();
+                    CalculatorVM.WasEqualsButtonUsed = true;
+                }
+            }
+            else
+            {
+                if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                {
+                    CalculatorVM.FirstNumber = CalculatorVM.FullResult;
+                    result = double.Parse(CalculatorVM.FirstNumber) + double.Parse(CalculatorVM.SecondNumber);
+                    CalculatorVM.FullResult = result.ToString();
+                }
             }
         }
     }
