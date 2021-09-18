@@ -40,10 +40,6 @@ namespace Calculator.ViewModel.Commands
             return false;
         }
 
-        double result = 0;
-        double firstNumberDouble = 0;
-        double secondNumberDouble = 0;
-
         public void Execute(object parameter)
         {
             if(CalculatorVM.WasEqualsButtonUsed == false)
@@ -55,7 +51,9 @@ namespace Calculator.ViewModel.Commands
                 CalculatorVM.FirstNumber = parameter as string;
             }
 
-            
+            double result = 0;
+            double firstNumberDouble = 0;
+            double secondNumberDouble = 0;
             
             switch(Result.Operation)
             {
@@ -152,28 +150,6 @@ namespace Calculator.ViewModel.Commands
                         break;
                     }
                 
-            }
-        }
-
-        private void Calculate()
-        {
-            if (CalculatorVM.WasEqualsButtonUsed == false)
-            {
-                if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
-                {
-                    result = firstNumberDouble + secondNumberDouble;
-                    CalculatorVM.FullResult = result.ToString();
-                    CalculatorVM.WasEqualsButtonUsed = true;
-                }
-            }
-            else
-            {
-                if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
-                {
-                    CalculatorVM.FirstNumber = CalculatorVM.FullResult;
-                    result = double.Parse(CalculatorVM.FirstNumber) + double.Parse(CalculatorVM.SecondNumber);
-                    CalculatorVM.FullResult = result.ToString();
-                }
             }
         }
     }
