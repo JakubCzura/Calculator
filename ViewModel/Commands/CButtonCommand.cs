@@ -38,8 +38,10 @@ namespace Calculator.ViewModel.Commands
 
         public void Execute(object parameter)
         {
-            fullResultDouble = 0;
-            CalculatorVM.FullResult = fullResultDouble.ToString();
+            CalculatorVM.FirstNumber = string.Empty;
+            CalculatorVM.SecondNumber = string.Empty;
+            CalculatorVM.Operation = string.Empty;
+            CalculatorVM.FullResult = string.Empty;
         }
     }
 }

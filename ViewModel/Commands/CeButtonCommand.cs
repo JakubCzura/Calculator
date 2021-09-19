@@ -38,8 +38,7 @@ namespace Calculator.ViewModel.Commands
 
         public void Execute(object parameter)
         {
-            fullResultDouble = 0;
-            CalculatorVM.FullResult = fullResultDouble.ToString();
+            CalculatorVM.FullResult = string.Empty;
         }
     }
 }
