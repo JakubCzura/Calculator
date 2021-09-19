@@ -8,15 +8,12 @@ namespace Calculator.ViewModel.Commands
 {
     public class EqualsButtonCommand : ICommand
     {
-        public EqualsButtonCommand(CalculatorVM calculatorVM, Result result)
+        public EqualsButtonCommand(CalculatorVM calculatorVM)
         {
             CalculatorVM = calculatorVM;
-            Result = result;
         }
 
         CalculatorVM CalculatorVM { get; set; }
-
-        Result Result { get; set; }
 
         public event EventHandler CanExecuteChanged
         {
@@ -55,13 +52,13 @@ namespace Calculator.ViewModel.Commands
             double firstNumberDouble = 0;
             double secondNumberDouble = 0;
             
-            switch(Result.Operation)
+            switch(CalculatorVM.Operation)
             {
                 case "+":
                     {
                         if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FirstNumber, out firstNumberDouble) == true && double.TryParse(CalculatorVM.FullResult, out secondNumberDouble) == true)
                             {
                                 result = firstNumberDouble + secondNumberDouble;
                                 CalculatorVM.FullResult = result.ToString();
@@ -70,7 +67,7 @@ namespace Calculator.ViewModel.Commands
                         }
                         else
                         {
-                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FullResult, out firstNumberDouble) == true)
                             {
                                 CalculatorVM.FirstNumber = CalculatorVM.FullResult;
                                 result = double.Parse(CalculatorVM.FirstNumber) + double.Parse(CalculatorVM.SecondNumber);
@@ -83,7 +80,7 @@ namespace Calculator.ViewModel.Commands
                     {
                         if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FirstNumber, out firstNumberDouble) == true && double.TryParse(CalculatorVM.FullResult, out secondNumberDouble) == true)
                             {
                                 result = firstNumberDouble - secondNumberDouble;
                                 CalculatorVM.FullResult = result.ToString();
@@ -92,7 +89,7 @@ namespace Calculator.ViewModel.Commands
                         }
                         else
                         {
-                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FullResult, out firstNumberDouble) == true)
                             {
                                 CalculatorVM.FirstNumber = CalculatorVM.FullResult;
                                 result = double.Parse(CalculatorVM.FirstNumber) - double.Parse(CalculatorVM.SecondNumber);
@@ -105,7 +102,7 @@ namespace Calculator.ViewModel.Commands
                     {
                         if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FirstNumber, out firstNumberDouble) == true && double.TryParse(CalculatorVM.FullResult, out secondNumberDouble) == true)
                             {
                                 result = firstNumberDouble / secondNumberDouble;
                                 CalculatorVM.FullResult = result.ToString();
@@ -114,7 +111,7 @@ namespace Calculator.ViewModel.Commands
                         }
                         else
                         {
-                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FullResult, out firstNumberDouble) == true)
                             {
                                 CalculatorVM.FirstNumber = CalculatorVM.FullResult;
                                 result = double.Parse(CalculatorVM.FirstNumber) / double.Parse(CalculatorVM.SecondNumber);
@@ -127,7 +124,7 @@ namespace Calculator.ViewModel.Commands
                     {
                         if (CalculatorVM.WasEqualsButtonUsed == false)
                         {
-                            if (double.TryParse(Result.FirstNumber, out firstNumberDouble) == true && double.TryParse(Result.FullResult, out secondNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FirstNumber, out firstNumberDouble) == true && double.TryParse(CalculatorVM.FullResult, out secondNumberDouble) == true)
                             {
                                 result = firstNumberDouble * secondNumberDouble;
                                 CalculatorVM.FullResult = result.ToString();
@@ -136,7 +133,7 @@ namespace Calculator.ViewModel.Commands
                         }
                         else
                         {
-                            if (double.TryParse(Result.FullResult, out firstNumberDouble) == true)
+                            if (double.TryParse(CalculatorVM.FullResult, out firstNumberDouble) == true)
                             {
                                 CalculatorVM.FirstNumber = CalculatorVM.FullResult;
                                 result = double.Parse(CalculatorVM.FirstNumber) * double.Parse(CalculatorVM.SecondNumber);

@@ -64,7 +64,7 @@ namespace Calculator.ViewModel
             DivideButtonCommand = new DivideButtonCommand(this);
             AddButtonCommand = new AddButtonCommand(this, Result);
             SubtractButtonCommand = new SubtractButtonCommand(this);
-            EqualsButtonCommand = new EqualsButtonCommand(this, Result);
+            EqualsButtonCommand = new EqualsButtonCommand(this);
         }
 
         public string FirstNumber
