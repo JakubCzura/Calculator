@@ -60,10 +60,10 @@ namespace Calculator.ViewModel
             PercentButtonCommand = new PercentButtonCommand(this);
             CeButtonCommand = new CeButtonCommand(this);
             CButtonCommand = new CButtonCommand(this);
-            MultiplyButtonCommand = new MultiplyButtonCommand(this, Result);
-            DivideButtonCommand = new DivideButtonCommand(this, Result);
+            MultiplyButtonCommand = new MultiplyButtonCommand(this);
+            DivideButtonCommand = new DivideButtonCommand(this);
             AddButtonCommand = new AddButtonCommand(this, Result);
-            SubtractButtonCommand = new SubtractButtonCommand(this, Result);
+            SubtractButtonCommand = new SubtractButtonCommand(this);
             EqualsButtonCommand = new EqualsButtonCommand(this, Result);
         }
 

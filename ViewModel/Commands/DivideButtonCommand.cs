@@ -8,15 +8,12 @@ namespace Calculator.ViewModel.Commands
 {
     public class DivideButtonCommand : ICommand
     {
-        public DivideButtonCommand(CalculatorVM calculatorVM, Result result)
+        public DivideButtonCommand(CalculatorVM calculatorVM)
         {
             CalculatorVM = calculatorVM;
-            Result = result;
         }
 
         CalculatorVM CalculatorVM { get; set; }
-
-        Result Result { get; set; }
 
         public event EventHandler CanExecuteChanged
         {
@@ -30,7 +27,7 @@ namespace Calculator.ViewModel.Commands
         {
             string fullResult = parameter as string;
 
-            if (fullResult != null && fullResult.Length > 0)
+            if (string.IsNullOrWhiteSpace(fullResult) == false && fullResult.Length > 0)
             {
                 if (double.TryParse(parameter.ToString(), out fullResultDouble) == true && double.IsInfinity(fullResultDouble) == false)
                 {

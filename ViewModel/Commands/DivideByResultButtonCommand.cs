@@ -24,7 +24,8 @@ namespace Calculator.ViewModel.Commands
         {
             string fullResult = parameter as string;
             decimal fullResultDecimal;
-            if (fullResult != null && fullResult.Length > 0)
+            
+            if (string.IsNullOrWhiteSpace(fullResult) == false && fullResult.Length > 0)
             {
                 if (decimal.TryParse(parameter.ToString(), out fullResultDecimal) == true && fullResultDecimal!=0)
                 {

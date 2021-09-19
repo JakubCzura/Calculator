@@ -26,9 +26,9 @@ namespace Calculator.ViewModel.Commands
         {
             string fullResult = parameter as string;
             
-            if (fullResult != null && fullResult.Length > 0)
+            if (string.IsNullOrWhiteSpace(fullResult) == false && fullResult.Length > 0)
             {
-                if (double.TryParse(parameter.ToString(), out fullResultDouble) == true && fullResultDouble >= 0 && double.IsInfinity(fullResultDouble) == false)
+                if (double.TryParse(parameter.ToString(), out fullResultDouble) == true && double.IsInfinity(fullResultDouble) == false)
                 {
                     return true;
                 }
