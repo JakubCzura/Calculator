@@ -62,7 +62,7 @@ namespace Calculator.ViewModel
             CButtonCommand = new CButtonCommand(this);
             MultiplyButtonCommand = new MultiplyButtonCommand(this);
             DivideButtonCommand = new DivideButtonCommand(this);
-            AddButtonCommand = new AddButtonCommand(this, Result);
+            AddButtonCommand = new AddButtonCommand(this);
             SubtractButtonCommand = new SubtractButtonCommand(this);
             EqualsButtonCommand = new EqualsButtonCommand(this);
         }
