@@ -35,8 +35,30 @@
         <KeyBinding  Key="NumPad8" Command="{Binding Source={StaticResource CalculatorVM}, Path=EightButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding>
         <KeyBinding  Key="NumPad9" Command="{Binding Source={StaticResource CalculatorVM}, Path=NineButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding>
         <KeyBinding  Key="NumPad0" Command="{Binding Source={StaticResource CalculatorVM}, Path=ZeroButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding>
+        
+        <KeyBinding  Key="Divide" Command="{Binding Source={StaticResource CalculatorVM}, Path=DivideButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--NumKey-->
+        <KeyBinding  Key="Multiply" Command="{Binding Source={StaticResource CalculatorVM}, Path=MultiplyButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--NumKey-->
+        <KeyBinding  Key="Add" Command="{Binding Source={StaticResource CalculatorVM}, Path=AddButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--NumKey-->
+        <KeyBinding  Key="Subtract" Command="{Binding Source={StaticResource CalculatorVM}, Path=SubtractButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--NumKey-->
+        
+        <KeyBinding  Key="Enter" Command="{Binding Source={StaticResource CalculatorVM}, Path=EqualsButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--NumKey and keyboard-->
+
+        <KeyBinding  Key="OemMinus" Command="{Binding Source={StaticResource CalculatorVM}, Path=SubtractButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
+        <KeyBinding  Key="OemQuestion" Command="{Binding Source={StaticResource CalculatorVM}, Path=DivideButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
+        <KeyBinding  Gesture="Shift+OemPlus" Command="{Binding Source={StaticResource CalculatorVM}, Path=AddButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
+        <KeyBinding  Modifiers="Shift" Key="D8" Command="{Binding Source={StaticResource CalculatorVM}, Path=MultiplyButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
+        <KeyBinding  Key="OemComma" Command="{Binding Source={StaticResource CalculatorVM}, Path=CommaButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
+        <KeyBinding  Key="OemPeriod" Command="{Binding Source={StaticResource CalculatorVM}, Path=CommaButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
+        <KeyBinding  Key="Backspace" Command="{Binding Source={StaticResource CalculatorVM}, Path=BackButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
        
-        <KeyBinding  Key="Backspace" Command="{Binding Source={StaticResource CalculatorVM}, Path=BackButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding>
+      
+        
+      
+       
+        
+        
+
+
     </Window.InputBindings>
     
     <Grid DataContext="{StaticResource CalculatorVM}">
