@@ -26,5 +26,13 @@
         <Style TargetType="Button" x:Key="numberButtonStyle" BasedOn="{StaticResource ButtonStyle}">
             <Setter Property="Background" Value="AliceBlue"></Setter>
         </Style>
+
+        <Style TargetType="Menu" x:Key="menuStyle">
+            <Setter Property="Background" Value="Aqua"></Setter>
+        </Style>
+
+        <Style TargetType="MenuItem" x:Key="menuItemStyle">
+            <Setter Property="Background" Value="Aqua"></Setter>
+        </Style>
     </Application.Resources>
 </Application>
