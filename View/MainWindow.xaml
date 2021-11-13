@@ -47,18 +47,10 @@
         <KeyBinding  Key="OemQuestion" Command="{Binding Source={StaticResource CalculatorVM}, Path=DivideButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
         <KeyBinding  Gesture="Shift+OemPlus" Command="{Binding Source={StaticResource CalculatorVM}, Path=AddButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
         <KeyBinding  Modifiers="Shift" Key="D8" Command="{Binding Source={StaticResource CalculatorVM}, Path=MultiplyButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
+        
         <KeyBinding  Key="OemComma" Command="{Binding Source={StaticResource CalculatorVM}, Path=CommaButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
         <KeyBinding  Key="OemPeriod" Command="{Binding Source={StaticResource CalculatorVM}, Path=CommaButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
         <KeyBinding  Key="Backspace" Command="{Binding Source={StaticResource CalculatorVM}, Path=BackButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding> <!--Keyboard-->
-       
-      
-        
-      
-       
-        
-        
-
-
     </Window.InputBindings>
     
     <Grid DataContext="{StaticResource CalculatorVM}">
@@ -159,8 +151,7 @@
                 Style="{StaticResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding BackButtonCommand}"
-                CommandParameter="{Binding FullResult}"
-                />
+                CommandParameter="{Binding FullResult}"/>
         <Button x:Name="OneButton" Grid.Row="5" Content="1" 
                 Style="{StaticResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
@@ -200,8 +191,8 @@
                 Style="{StaticResource equalsButtonStyle}" 
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding EqualsButtonCommand}"
-                CommandParameter="{Binding FullResult}"
-                />
+                CommandParameter="{Binding FullResult}"/>
+        
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
             <StackPanel Orientation="Horizontal">
                 <TextBlock x:Name="firstNumberTextBox" 
