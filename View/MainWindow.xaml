@@ -10,7 +10,10 @@
         Title="Calculator" Height="550" Width="400" MinHeight="450" MinWidth="300" MaxHeight="600" MaxWidth="400" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <vm:CalculatorVM x:Key="CalculatorVM"/>
-        <app:App x:Key="App"/>
+        <Style TargetType="local:MainWindow">
+            <Setter Property="Background" Value="#FFD0E281"></Setter>
+        </Style>
+        <!--<app:App x:Key="App"/>-->
     </Window.Resources>
 
   

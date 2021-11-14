@@ -6,11 +6,11 @@
     
     <Application.Resources>
         
-        <SolidColorBrush x:Key="appBackgroundColour" Color="#FFD0E281"/>
+        <!--<SolidColorBrush x:Key="appBackgroundColour" Color="#FFD0E281"/>-->
 
-        <Style TargetType="Grid">
+        <!--<Style TargetType="Grid">
             <Setter Property="Background" Value="{StaticResource appBackgroundColour}"/>
-        </Style>
+        </Style>-->
 
         <Style TargetType="Button" x:Key="ButtonStyle">
             <Setter Property="FontSize" Value="15"></Setter>
