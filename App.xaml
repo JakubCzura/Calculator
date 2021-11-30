@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Calculator"
              StartupUri="View/MainWindow.xaml">
-    
+
     <Application.Resources>
-        
+
         <!--<SolidColorBrush x:Key="appBackgroundColour" Color="#FFD0E281"/>-->
 
         <!--<Style TargetType="Grid">
@@ -34,8 +34,10 @@
         <Style TargetType="MenuItem" x:Key="menuItemStyle">
             <Setter Property="Background" Value="Aqua"></Setter>
         </Style>-->
-         
+
         <!--<ResourceDictionary Source="\Themes\Standard.xaml"></ResourceDictionary>-->
-        <ResourceDictionary Source="\Themes\Green.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="\Themes\Pink.xaml"></ResourceDictionary>
+        <!--<ResourceDictionary Source="\Themes\Blue.xaml"></ResourceDictionary>-->
+        <!--<ResourceDictionary Source="\Themes\Green.xaml"></ResourceDictionary>-->
     </Application.Resources>
 </Application>

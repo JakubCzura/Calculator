@@ -211,9 +211,9 @@
             <Menu DockPanel.Dock="Top" VerticalAlignment="Center" Style="{StaticResource menuStyle}">
                 <MenuItem Header="Wygląd" Style="{StaticResource menuItemStyle}" >
                     <MenuItem Header="Motywy" Style="{StaticResource menuItemStyle}">
-                        <MenuItem Header="Jasny" Style="{StaticResource menuItemStyle}"></MenuItem>
-                        <MenuItem Header="Ciemny" Style="{StaticResource menuItemStyle}"></MenuItem>
-                        <MenuItem Header="Domyślny" Style="{StaticResource menuItemStyle}"></MenuItem>
+                        <MenuItem Header="Standardowy" Style="{StaticResource menuItemStyle}"></MenuItem>
+                        <MenuItem Header="Zielony" Style="{StaticResource menuItemStyle}"></MenuItem>
+                        <MenuItem Header="Niebieski" Style="{StaticResource menuItemStyle}"></MenuItem>
                     </MenuItem>
                     <MenuItem Header="PLik" Style="{StaticResource menuItemStyle}"></MenuItem>
                     <MenuItem Header="PLik" Style="{StaticResource menuItemStyle}"></MenuItem>
