@@ -7,17 +7,13 @@
         mc:Ignorable="d"
         xmlns:app="clr-namespace:Calculator"
         xmlns:vm="clr-namespace:Calculator.ViewModel"
-        Title="Calculator" Height="550" Width="400" MinHeight="450" MinWidth="300" MaxHeight="600" MaxWidth="400" WindowStartupLocation="CenterScreen">
+        Title="Calculator" Height="550" Width="400" MinHeight="450" MinWidth="300" MaxHeight="600" MaxWidth="400" WindowStartupLocation="CenterScreen"
+        Style="{StaticResource windowStyle}"
+        >
     <Window.Resources>
         <vm:CalculatorVM x:Key="CalculatorVM"/>
-        <Style TargetType="local:MainWindow">
-            <Setter Property="Background" Value="#FFD0E281"></Setter>
-        </Style>
-        <!--<app:App x:Key="App"/>-->
     </Window.Resources>
-
-  
-
+    
     <Window.InputBindings>
         <KeyBinding  Key="D1" Command="{Binding Source={StaticResource CalculatorVM}, Path=OneButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding>
         <KeyBinding  Key="D2" Command="{Binding Source={StaticResource CalculatorVM}, Path=TwoButtonCommand}" CommandParameter="{Binding Source={StaticResource CalculatorVM}, Path=FullResult}"></KeyBinding>
