@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:app="clr-namespace:Calculator"
         xmlns:vm="clr-namespace:Calculator.ViewModel"
-        Title="Calculator" Height="550" Width="400" MinHeight="450" MinWidth="300" MaxHeight="600" MaxWidth="400" WindowStartupLocation="CenterScreen"
+        Title="Calculator" Height="550" Width="400" MinHeight="450" MinWidth="300" MaxHeight="600" MaxWidth="400" WindowStartupLocation="CenterScreen"   
         Style="{DynamicResource windowStyle}"
         >
     <Window.Resources>
