@@ -214,6 +214,8 @@
                         <MenuItem Header="Standardowy" Style="{StaticResource menuItemStyle}"></MenuItem>
                         <MenuItem Header="Zielony" Style="{StaticResource menuItemStyle}"></MenuItem>
                         <MenuItem Header="Niebieski" Style="{StaticResource menuItemStyle}"></MenuItem>
+                        <MenuItem Header="Różowy" Style="{StaticResource menuItemStyle}"></MenuItem>
+                        <MenuItem Header="Żółty" Style="{StaticResource menuItemStyle}"></MenuItem>
                     </MenuItem>
                     <MenuItem Header="PLik" Style="{StaticResource menuItemStyle}"></MenuItem>
                     <MenuItem Header="PLik" Style="{StaticResource menuItemStyle}"></MenuItem>
