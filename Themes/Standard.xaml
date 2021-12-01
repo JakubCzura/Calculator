@@ -17,11 +17,11 @@
     </Style>
 
     <Style TargetType="Menu" x:Key="menuStyle">
-        <Setter Property="Background" Value="Aqua"></Setter>
+        <Setter Property="Background" Value="Beige"></Setter>
     </Style>
 
     <Style TargetType="MenuItem" x:Key="menuItemStyle">
-        <Setter Property="Background" Value="Aqua"></Setter>
+        <Setter Property="Background" Value="Beige"></Setter>
     </Style>
 
     <Style TargetType="Window" x:Key="windowStyle">
