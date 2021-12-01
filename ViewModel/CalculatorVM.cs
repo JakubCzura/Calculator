@@ -6,11 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using Calculator.Themes;
 
 namespace Calculator.ViewModel
 {
     public class CalculatorVM : INotifyPropertyChanged
     {
+        //EnumThemes Themes = new EnumThemes();
+
         public bool WasEqualsButtonUsed { get; set; } = false;
 
         private Result Result = new Result();
@@ -71,12 +74,11 @@ namespace Calculator.ViewModel
             AddButtonCommand = new AddButtonCommand(this);
             SubtractButtonCommand = new SubtractButtonCommand(this);
             EqualsButtonCommand = new EqualsButtonCommand(this);
-            SetDefaultThemeCommand = new ChangeThemeCommand("Standard");
-            SetGreenThemeCommand = new ChangeThemeCommand("Green");
-            SetBlueThemeCommand = new ChangeThemeCommand("Blue");
-            SetPinkThemeCommand = new ChangeThemeCommand("Pink");
-            SetYellowThemeCommand = new ChangeThemeCommand("Yellow");
-
+            SetDefaultThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Standard);
+            SetGreenThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Green);
+            SetBlueThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Blue);
+            SetPinkThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Pink);
+            SetYellowThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Yellow);
 
         }
 

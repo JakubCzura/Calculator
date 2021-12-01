@@ -6,18 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using Calculator.Themes;
 
 namespace Calculator.ViewModel.Commands.MenuCommands
 {
     public class ChangeThemeCommand : ICommand
     {
-        public ChangeThemeCommand(string themeName)
+        public ChangeThemeCommand(EnumThemes.Themes theme)
         {
-            ThemeName = themeName;
+            Theme = theme;
         }
 
-        string ThemeName { get; set; } 
-
+        EnumThemes.Themes Theme { get; set; }
+        
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
@@ -30,16 +31,15 @@ namespace Calculator.ViewModel.Commands.MenuCommands
         }
 
         public void Execute(object parameter)
-        {
+        {         
             try
             {
                 App.Current.Resources.Clear();
-                App.Current.Resources.Source = new Uri($"/Themes/{ThemeName}.xaml", UriKind.Relative);
+                App.Current.Resources.Source = new Uri($"/Themes/{Theme}.xaml", UriKind.Relative);
             }
             catch (Exception exception)
-            {
-                App.Current.Resources.Source = new Uri(@"/Themes/Standard.xaml", UriKind.Relative);
-                MessageBox.Show(exception.Message);
+            {              
+                MessageBox.Show(exception.Message, "Zrestartuj aplikację");
             }
         }
     }
