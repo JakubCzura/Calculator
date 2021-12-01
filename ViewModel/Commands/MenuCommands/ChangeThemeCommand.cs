@@ -30,7 +30,7 @@ namespace Calculator.ViewModel.Commands.MenuCommands
         }
 
         public void Execute(object parameter)
-        {                   
+        {
             try
             {
                 App.Current.Resources.Clear();
