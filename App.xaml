@@ -35,10 +35,10 @@
             <Setter Property="Background" Value="Aqua"></Setter>
         </Style>-->
 
-        <!--<ResourceDictionary Source="\Themes\Standard.xaml"></ResourceDictionary>-->
+        <ResourceDictionary Source="\Themes\Standard.xaml"></ResourceDictionary>
         <!--<ResourceDictionary Source="\Themes\Pink.xaml"></ResourceDictionary>-->
         <!--<ResourceDictionary Source="\Themes\Yellow.xaml"></ResourceDictionary>-->
         <!--<ResourceDictionary Source="\Themes\Blue.xaml"></ResourceDictionary>-->
-        <ResourceDictionary Source="\Themes\Green.xaml"></ResourceDictionary>
+        <!--<ResourceDictionary Source="\Themes\Green.xaml"></ResourceDictionary>-->
     </Application.Resources>
 </Application>

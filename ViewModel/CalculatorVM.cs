@@ -1,6 +1,7 @@
 ﻿using Calculator.Model;
 using Calculator.ViewModel.Commands;
 using Calculator.ViewModel.Commands.NumberButtons;
+using Calculator.ViewModel.Commands.MenuCommands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,11 @@ namespace Calculator.ViewModel
         public AddButtonCommand AddButtonCommand { get; set; }
         public SubtractButtonCommand SubtractButtonCommand { get; set; }
         public EqualsButtonCommand EqualsButtonCommand { get; set; }
+        public ChangeThemeCommand SetDefaultThemeCommand { get; set; }
+        public ChangeThemeCommand SetGreenThemeCommand { get; set; }
+        public ChangeThemeCommand SetBlueThemeCommand { get; set; }
+        public ChangeThemeCommand SetPinkThemeCommand { get; set; }
+        public ChangeThemeCommand SetYellowThemeCommand { get; set; }
 
         public CalculatorVM()
         {
@@ -65,23 +71,30 @@ namespace Calculator.ViewModel
             AddButtonCommand = new AddButtonCommand(this);
             SubtractButtonCommand = new SubtractButtonCommand(this);
             EqualsButtonCommand = new EqualsButtonCommand(this);
+            SetDefaultThemeCommand = new ChangeThemeCommand("Standard");
+            SetGreenThemeCommand = new ChangeThemeCommand("Green");
+            SetBlueThemeCommand = new ChangeThemeCommand("Blue");
+            SetPinkThemeCommand = new ChangeThemeCommand("Pink");
+            SetYellowThemeCommand = new ChangeThemeCommand("Yellow");
+
+
         }
 
         public string FirstNumber
         {
             get { return Result.FirstNumber; }
-            set 
-            { 
+            set
+            {
                 Result.FirstNumber = value;
                 OnPropertyChanged(nameof(FirstNumber));
-            }     
+            }
         }
 
         public string SecondNumber
         {
             get { return Result.SecondNumber; }
-            set 
-            { 
+            set
+            {
                 Result.SecondNumber = value;
                 OnPropertyChanged(nameof(SecondNumber));
             }

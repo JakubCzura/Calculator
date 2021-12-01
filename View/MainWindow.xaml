@@ -85,146 +85,146 @@
         </Grid.RowDefinitions>
 
         <Button x:Name="FourButton" Grid.Row="5" Content="4" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding FourButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="FiveButton"  Grid.Row="5" Grid.Column="1" Content="5" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding FiveButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="SixButton" Grid.Row="5" Grid.Column="2" Content="6" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding SixButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="5" Grid.Column="3" Content="-" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding SubtractButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="SevenButton" Grid.Row="4" Content="7" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding SevenButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="EightButton" Grid.Row="4" Grid.Column="1" Content="8" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding EightButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="NineButton" Grid.Row="4" Grid.Column="2" Content="9" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding NineButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="4" Grid.Column="3" Content="x" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding MultiplyButtonCommand}"
                 CommandParameter="{Binding FullResult}"
                 />
         <Button Grid.Row="3" Content="1/x" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding DivideByResultButtonCommand}"
                 CommandParameter="{Binding FullResult}"
                 />
         <Button Grid.Row="3" Grid.Column="1" Content="x^2" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding PowerButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="3" Grid.Column="2" Content="sqrt(x)" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding SquareRootButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="3" Grid.Column="3" Content="/" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding DivideButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="2" Content="%" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding PercentButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="2" Grid.Column="1" Content="CE" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding CeButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="2" Grid.Column="2" Content="C" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding CButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="2" Grid.Column="3" Content="back" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding BackButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="OneButton" Grid.Row="6" Content="1" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding OneButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="TwoButton" Grid.Row="6" Grid.Column="1" Content="2" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding TwoButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="ThreeButton" Grid.Row="6" Grid.Column="2" Content="3" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding ThreeButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="6" Grid.Column="3" Content="+" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding AddButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="7" Content="+/-" 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding PlusMinusButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button x:Name="ZeroButton" Grid.Row="7" Grid.Column="1" Content="0" 
-                Style="{StaticResource numberButtonStyle}"
+                Style="{DynamicResource numberButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding ZeroButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
         <Button Grid.Row="7" Grid.Column="2" Content="," 
-                Style="{StaticResource ButtonStyle}"
+                Style="{DynamicResource ButtonStyle}"
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding CommaButtonCommand}"
                 CommandParameter="{Binding FullResult}" />
         <Button Grid.Row="7" Grid.Column="3" Content="=" 
-                Style="{StaticResource equalsButtonStyle}" 
+                Style="{DynamicResource equalsButtonStyle}" 
                 DataContext="{StaticResource CalculatorVM}"
                 Command="{Binding EqualsButtonCommand}"
                 CommandParameter="{Binding FullResult}"/>
 
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
-            <Menu DockPanel.Dock="Top" VerticalAlignment="Center" Style="{StaticResource menuStyle}">
-                <MenuItem Header="Wygląd" Style="{StaticResource menuItemStyle}" >
-                    <MenuItem Header="Motywy" Style="{StaticResource menuItemStyle}">
-                        <MenuItem Header="Standardowy" Style="{StaticResource menuItemStyle}"></MenuItem>
-                        <MenuItem Header="Zielony" Style="{StaticResource menuItemStyle}"></MenuItem>
-                        <MenuItem Header="Niebieski" Style="{StaticResource menuItemStyle}"></MenuItem>
-                        <MenuItem Header="Różowy" Style="{StaticResource menuItemStyle}"></MenuItem>
-                        <MenuItem Header="Żółty" Style="{StaticResource menuItemStyle}"></MenuItem>
+            <Menu DockPanel.Dock="Top" VerticalAlignment="Center" Style="{DynamicResource menuStyle}">
+                <MenuItem Header="Wygląd" Style="{DynamicResource menuItemStyle}" >
+                    <MenuItem Header="Motywy" Style="{DynamicResource menuItemStyle}">
+                        <MenuItem Header="Standardowy" Style="{DynamicResource menuItemStyle}" Command="{Binding SetDefaultThemeCommand}"></MenuItem>
+                        <MenuItem Header="Zielony" Style="{DynamicResource menuItemStyle}" Command="{Binding SetGreenThemeCommand}"></MenuItem>
+                        <MenuItem Header="Niebieski" Style="{DynamicResource menuItemStyle}" Command="{Binding SetBlueThemeCommand}"></MenuItem>
+                        <MenuItem Header="Różowy" Style="{DynamicResource menuItemStyle}" Command="{Binding SetPinkThemeCommand}"></MenuItem>
+                        <MenuItem Header="Żółty" Style="{DynamicResource menuItemStyle}" Command="{Binding SetYellowThemeCommand}"></MenuItem>
                     </MenuItem>
-                    <MenuItem Header="PLik" Style="{StaticResource menuItemStyle}"></MenuItem>
-                    <MenuItem Header="PLik" Style="{StaticResource menuItemStyle}"></MenuItem>
+                    <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
+                    <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
                     <Separator></Separator>
-                    <MenuItem Header="PLik" Style="{StaticResource menuItemStyle}"></MenuItem>
+                    <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="File" Style="{StaticResource menuItemStyle}"></MenuItem>
-                <MenuItem Header="File" Style="{StaticResource menuItemStyle}"></MenuItem>
-                <MenuItem Header="File" Style="{StaticResource menuItemStyle}"></MenuItem>
+                <MenuItem Header="File" Style="{DynamicResource menuItemStyle}"></MenuItem>
+                <MenuItem Header="File" Style="{DynamicResource menuItemStyle}"></MenuItem>
+                <MenuItem Header="File" Style="{DynamicResource menuItemStyle}"></MenuItem>
             </Menu>
         </DockPanel>
 
