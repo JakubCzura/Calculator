@@ -7,7 +7,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\blueIcon.ico" />
+    <None Remove="View\greenIcon.ico" />
     <None Remove="View\MainWindow.xaml~RFa0e9b9.TMP" />
+    <None Remove="View\pinkIcon.ico" />
+    <None Remove="View\standardIcon.ico" />
+    <None Remove="View\themeIcon.ico" />
+    <None Remove="View\yellowIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pictures\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\blueIcon.ico" />
+    <Resource Include="View\greenIcon.ico" />
+    <Resource Include="View\pinkIcon.ico" />
+    <Resource Include="View\standardIcon.ico" />
+    <Resource Include="View\themeIcon.ico" />
+    <Resource Include="View\yellowIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="View\Pictures\greenIcon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

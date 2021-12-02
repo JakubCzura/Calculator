@@ -211,11 +211,34 @@
             <Menu DockPanel.Dock="Top" VerticalAlignment="Center" Style="{DynamicResource menuStyle}">
                 <MenuItem Header="Wygląd" Style="{DynamicResource menuItemStyle}" >
                     <MenuItem Header="Motywy" Style="{DynamicResource menuItemStyle}">
-                        <MenuItem Header="Standardowy" Style="{DynamicResource menuItemStyle}" Command="{Binding SetDefaultThemeCommand}"></MenuItem>
-                        <MenuItem Header="Zielony" Style="{DynamicResource menuItemStyle}" Command="{Binding SetGreenThemeCommand}"></MenuItem>
-                        <MenuItem Header="Niebieski" Style="{DynamicResource menuItemStyle}" Command="{Binding SetBlueThemeCommand}"></MenuItem>
-                        <MenuItem Header="Różowy" Style="{DynamicResource menuItemStyle}" Command="{Binding SetPinkThemeCommand}"></MenuItem>
-                        <MenuItem Header="Żółty" Style="{DynamicResource menuItemStyle}" Command="{Binding SetYellowThemeCommand}"></MenuItem>
+                        <MenuItem.Icon>
+                            <Image Source="/View/themeIcon.ico"></Image>
+                        </MenuItem.Icon>
+                        <MenuItem Header="Standardowy" Style="{DynamicResource menuItemStyle}" Command="{Binding SetDefaultThemeCommand}">
+                            <MenuItem.Icon>
+                                <Image Source="/View/standardIcon.ico"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Zielony" Style="{DynamicResource menuItemStyle}" Command="{Binding SetGreenThemeCommand}">
+                            <MenuItem.Icon>
+                                <Image Source="/View/greenIcon.ico"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Niebieski" Style="{DynamicResource menuItemStyle}" Command="{Binding SetBlueThemeCommand}">
+                            <MenuItem.Icon>
+                                <Image Source="/View/blueIcon.ico"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Różowy" Style="{DynamicResource menuItemStyle}" Command="{Binding SetPinkThemeCommand}">
+                            <MenuItem.Icon>
+                                <Image Source="/View/pinkIcon.ico"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Żółty" Style="{DynamicResource menuItemStyle}" Command="{Binding SetYellowThemeCommand}">
+                            <MenuItem.Icon>
+                                <Image Source="/View/yellowIcon.ico"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </MenuItem>
                     <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
                     <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
