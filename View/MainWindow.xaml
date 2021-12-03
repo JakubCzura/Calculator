@@ -240,14 +240,7 @@
                             </MenuItem.Icon>
                         </MenuItem>
                     </MenuItem>
-                    <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
-                    <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
-                    <Separator></Separator>
-                    <MenuItem Header="PLik" Style="{DynamicResource menuItemStyle}"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="File" Style="{DynamicResource menuItemStyle}"></MenuItem>
-                <MenuItem Header="File" Style="{DynamicResource menuItemStyle}"></MenuItem>
-                <MenuItem Header="File" Style="{DynamicResource menuItemStyle}"></MenuItem>
             </Menu>
         </DockPanel>
 
