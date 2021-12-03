@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using Calculator.Themes;
+using Calculator.ViewModel.DataFile;
 
 namespace Calculator.ViewModel
 {
@@ -79,6 +80,7 @@ namespace Calculator.ViewModel
             SetBlueThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Blue);
             SetPinkThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Pink);
             SetYellowThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Yellow);
+            ThemeData.Show();
         }
 
         public string FirstNumber

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using Calculator.Themes;
+using Calculator.ViewModel.DataFile;
 
 namespace Calculator.ViewModel.Commands.MenuCommands
 {
