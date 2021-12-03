@@ -21,25 +21,48 @@ namespace Calculator.ViewModel.DataFile
 
         public static void SaveTheme(EnumThemes.Themes theme)
         {           
-            using(StreamWriter StreamWriter = new StreamWriter(DataPath, false))
+            try
             {
-                StreamWriter.WriteLine(theme.ToString());
+                using (StreamWriter StreamWriter = new StreamWriter(DataPath, false))
+                {
+                    StreamWriter.WriteLine(theme.ToString());
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
             }
         }
 
         public static string ReadTheme()
         {
-            using(StreamReader StreamReader = new StreamReader(DataPath))
+            try
             {
-                ThemeName = StreamReader.ReadLine();
-                return ThemeName;   
+                using (StreamReader StreamReader = new StreamReader(DataPath))
+                {
+                    ThemeName = StreamReader.ReadLine();
+                    return ThemeName;
+                }
             }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                return "Standard.xaml";              
+            }
+           
         }
 
         public static void SetTheme()
         {
-            App.Current.Resources.Clear();
-            App.Current.Resources.Source = new Uri($"/Themes/{ThemeData.ReadTheme()}.xaml", UriKind.Relative);
+            try
+            {
+                App.Current.Resources.Clear();
+                App.Current.Resources.Source = new Uri($"/Themes/{ThemeData.ReadTheme()}.xaml", UriKind.Relative);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }
