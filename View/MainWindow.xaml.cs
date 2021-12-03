@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.ViewModel.DataFile;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,6 +20,7 @@ namespace Calculator.View
     {
         public MainWindow()
         {
+            ThemeData.SetTheme();
             InitializeComponent();
         }
     }
