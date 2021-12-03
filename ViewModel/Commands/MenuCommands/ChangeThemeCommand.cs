@@ -37,6 +37,7 @@ namespace Calculator.ViewModel.Commands.MenuCommands
             {
                 App.Current.Resources.Clear();
                 App.Current.Resources.Source = new Uri($"/Themes/{Theme}.xaml", UriKind.Relative);
+                ThemeData.SaveTheme(Theme);
             }
             catch (Exception exception)
             {              

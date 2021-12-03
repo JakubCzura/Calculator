@@ -80,7 +80,7 @@ namespace Calculator.ViewModel
             SetBlueThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Blue);
             SetPinkThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Pink);
             SetYellowThemeCommand = new ChangeThemeCommand(EnumThemes.Themes.Yellow);
-            ThemeData.Show();
+            //ThemeData.SetTheme();           
         }
 
         public string FirstNumber
