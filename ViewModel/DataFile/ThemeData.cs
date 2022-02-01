@@ -13,7 +13,8 @@ namespace Calculator.ViewModel.DataFile
     {
         private static string ThemeName { get; set; } = "Standard";
         private static string DataPath = Path.Combine(Environment.CurrentDirectory, "ThemesData.txt");
-        
+        private static readonly string DefaultTheme = "Standard";
+
         public static void Show()
         {
             MessageBox.Show(DataPath);
@@ -48,7 +49,7 @@ namespace Calculator.ViewModel.DataFile
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
-                return "Standard.xaml";              
+                return DefaultTheme;              
             }
            
         }
