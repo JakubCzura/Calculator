@@ -25,7 +25,8 @@ namespace Calculator.ViewModel.DataFile
             {
                 using (StreamWriter StreamWriter = new StreamWriter(DataPath, false))
                 {
-                    StreamWriter.WriteLine(theme.ToString());               
+                    StreamWriter.WriteLine(theme.ToString());
+                    //MessageBox.Show(DataPath);
                 }
             }
             catch (Exception exception)
